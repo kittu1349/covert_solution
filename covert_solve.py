@@ -75,13 +75,11 @@ def decode_ip_ids(pcapng_file, key):
 message = "csawctf{"
 encoded_dict = generate_encoded_ascii_dict(message)
 
-# Replace 'your_pcapng_file.pcapng' with the path to your PCAPNG file
 pcapng_file = 'chall.pcapng'
 
 # Scan for potential keys
 potential_keys = scan_pcapng_for_encoded_ids(pcapng_file, encoded_dict)
 
-# Assuming key 55 is found based on your observation, let's proceed with that key
 if 55 in potential_keys:
     decode_ip_ids(pcapng_file, key=55)
 else:
